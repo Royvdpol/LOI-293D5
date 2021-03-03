@@ -114,12 +114,6 @@ nav {
   padding: 15px;
 }
 
-.menu {
-  grid-area: 1 / 5 / 2 / 6;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
 .homeimg {
   width: 100%;
   grid-area: img;
@@ -172,18 +166,18 @@ h2 {
   margin-block-end: 2px;
 }
 
-ul {
+.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-li {
+.menu li {
   float: left;
 }
 
-li a {
+.menu .menu-item {
   display: block;
   padding: 8px;
   color: var(--black);
@@ -191,33 +185,23 @@ li a {
   font-family: var(--goldman), cursive;
 }
 
-a.menu:hover {
+.menu .menu-item:hover {
   color: darkred;
 }
 
-a.menu:active {
+.menu .menu-item:active {
   text-decoration: underline;
   color: darkred;
 }
 
-.current {
+.menu .menu-item.current {
   text-decoration: underline;
   color: darkred;
 }
 
-a.media:hover {
+.menu .menu-item:hover {
   text-decoration: none;
   color: darkred;
-}
-
-a.media:active {
-  text-decoration: none;
-  color: darkred;
-}
-
-a.media {
-  text-decoration: none;
-  color: blue;
 }
 
 mark.red {
@@ -240,7 +224,7 @@ mark.grey {
   display: inline-block;
 }
 
-.dropdown-content {
+.menu .menu-item.dropdown-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -262,7 +246,7 @@ mark.grey {
   background-color: #ddd;
 }
 
-.show {
+.menu .menu-item.dropdown-content.show {
   display: block;
 }
 
