@@ -17,6 +17,7 @@ body {
   grid-template-rows: auto auto auto auto;
   gap: 0px 0px;
   grid-template-areas: "header" "img" "main" "footer";
+  font-family: var(--kanit), sans-serif;
 }
 
 .container {
@@ -49,8 +50,9 @@ footer {
 
 .col {
   padding-inline-start: 10px;
-  padding-inline-start: 10px;
-
+  padding-inline-end: 10px;
+  padding-block-end: 10px;
+  padding-block-start: 10px;
 }
 
 .col:first-child {
@@ -97,12 +99,12 @@ figure {
   }
 }
 
-span {
+.logo span {
   font-family: var(--goldman), cursive;
   font-size: larger;
   position: absolute;
   top: -25px;
-  left: 25px;
+  left: 50px;
   width: 100%;
   font-weight: 500;
 }
@@ -135,6 +137,10 @@ nav {
   width: 100%;
 }
 
+.photobox a {
+  display:flex;
+}
+
 .photo {
   width: 100%;
   margin-inline-end: auto;
@@ -142,17 +148,9 @@ nav {
   object-fit: cover;
 }
 
-.phototext {
-  width: 90%;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  padding-block-end: 15px;
-}
-
 .photocontainer {
   width: 100%;
   height: 100%;
-  min-height: 450px;
   background-color: lightgrey;
   padding: 10px;
 }
@@ -170,11 +168,11 @@ h2 {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .menu li {
   float: left;
+  position: relative;
 }
 
 .menu .menu-item {
@@ -231,8 +229,6 @@ mark.grey {
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  margin-inline-start: 136px;
-  margin-block-start: 30px;
 }
 
 .dropdown-content a {
@@ -361,22 +357,70 @@ iframe {
     flex: 0 0 auto;
     width: 50%;
   }
+  .row.remove-col-padding .col {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+  }
+  .photobox {
+    padding: 5px;
+  }
+  .mediumscreen-whole {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .mediumscreen-whole .photo {
+    width: 30%;
+    max-height: 100%;
+    float: left;
+    margin-inline-end: 10px;
+  }
+  .photo.mediumscreen-float-right {
+    width: 30%;
+    max-height: 100%;
+    float: right;
+    margin-inline-end: 0;
+    margin-inline-start: 10px;
+  }
 }
 
-@media screen and (max-width:320px) {
-  .headerparent, .contentparent, .mediaparent, .photoparent {
-    display: block;
-    margin: auto;
+@media screen and (max-width:768px) {
+  .homeimg {
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
   }
-  .centered {
-    top: 45%;
-    left: 50%;
+  .mediumscreen-one-third {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
   }
-  nav {
-    padding-block-start: 15px;
+  .mediumscreen-half {
+    flex: 0 0 auto;
+    width: 50%;
   }
-  .media1, .media2, .media3, .media4, .media5 {
-    width: 95%;
+  .photobox {
+    padding: 5px;
+  }
+  .mediumscreen-whole {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .mediumscreen-whole .photo {
+    width: 30%;
+    max-height: 100%;
     float: left;
+    margin-inline-end: 10px;
+  }
+  .photo.mediumscreen-float-right {
+    width: 30%;
+    max-height: 100%;
+    float: right;
+    margin-inline-end: 0;
+    margin-inline-start: 10px;
+  }
+  .col {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
   }
 }
