@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+   <head>
+      <meta charset="UTF-8">
+      <title>293D5 - Nieuws</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+      </head>
+   <body>
+      <div class="container">
+         <div class="contentcontainer">
+            <div class="headerparent">
+               <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+               <div class="centered">Ricochet</div>
+                  <div class="menu">
+                     <nav>
+                        <ul>
+                           <li><a class="menu" href="index.html">Home</a></li>
+                           <li><a class="menu" href="news.html">News</a></li>
+                              <li><a class="menu btn" onclick="myFunction()" href="#">Media</a></li>
+                                 <li id="myDropdown" class="dropdown-content">
+                                    <a href="pictures.html" class="menu">Pictures</a>
+                                    <a href="videos.html" class="menu">Videos</a>
+                                 </li>
+                           <li><a class="menu" href="about.html">About</a></li>
+                           <li><a class="menu current" href="contact.html">Contact</a></li>
+                        </ul>
+                     </nav>                   
+                     <script>
+                     /* When the user clicks on the button, 
+                     toggle between hiding and showing the dropdown content */
+                     function myFunction() {
+                     document.getElementById("myDropdown").classList.toggle("show");
+                     }
+                     
+                     // Close the dropdown if the user clicks outside of it
+                     window.onclick = function(event) {
+                     if (!event.target.matches('.btn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                           var openDropdown = dropdowns[i];
+                           if (openDropdown.classList.contains('show')) {
+                           openDropdown.classList.remove('show');
+                           }
+                        }
+                     }
+                     }
+                     </script>
+                  </div>
+               </div>
+            <hr class="outerhr" />
+               <div id="googleMap" class="maps"></div>
+                  <script>
+                  function myMap() {
+                  var mapProp= {
+                  center:new google.maps.LatLng(53.105246, 6.876284),
+                  zoom:15,
+                  };
+                  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                  }
+                  </script>
+
+                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaNOersEsNMr95hILPHwDF-BTWkmCKQK0&callback=myMap"></script>
+            <hr class="outerhr" />
+            <h3>Contact</h3>
+               <div class="contactcontainer">
+                  <form action="#">
+                     <label for="name">Naam</label>
+                     <input type="text" id="name" name="name" placeholder="Uw naam" required>
+
+                     <label for="email">Email</label>
+                     <input type="email" id="email" name="email" placeholder="Uw email adres" required>
+
+                     <label for="phone">Telefoonnummer</label>
+                     <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Gebruik minimaal 10 cijfers" placeholder="Uw telefoonnummer">
+
+                     <label for="subject">Onderwerp</label>
+                     <textarea id="subject" name="subject" placeholder="Uw bericht" style="height:200px" required></textarea>
+
+                     <input type="submit" value="Verstuur">
+                  </form>
+               </div>
+            <hr class="outerhr" />
+            <footer>&copy; Roy van de Pol <script>document.write(new Date().getFullYear())</script></footer>
+         </div>
+      </div>
+   </body>
+</html>

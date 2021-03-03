@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+
+<head>
+   <meta charset="UTF-8">
+   <title>293D5 - Videos</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <div class="container">
+      <div class="contentcontainer">
+         <div class="headerparent">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+            <div class="centered">Ricochet</div>
+            <div class="menu">
+               <nav>
+                  <ul>
+                     <li><a class="menu" href="index.html">Home</a></li>
+                     <li><a class="menu" href="news.html">News</a></li>
+                     <li><a class="menu btn current" onclick="myFunction()" href="#media">Media</a></li>
+                     <li id="myDropdown" class="dropdown-content">
+                        <a href="pictures.html" class="current">Pictures</a>
+                        <a href="videos.html">Videos</a>
+                     </li>
+                     <li><a class="menu" href="about.html">About</a></li>
+                     <li><a class="menu" href="contact.html">Contact</a></li>
+                  </ul>
+               </nav>
+               <script>
+                  /* When the user clicks on the button, 
+                  toggle between hiding and showing the dropdown content */
+                  function myFunction() {
+                     document.getElementById("myDropdown").classList.toggle("show");
+                  }
+
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function (event) {
+                     if (!event.target.matches('.btn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                           var openDropdown = dropdowns[i];
+                           if (openDropdown.classList.contains('show')) {
+                              openDropdown.classList.remove('show');
+                           }
+                        }
+                     }
+                  }
+               </script>
+            </div>
+         </div>
+         <hr class="outerhr" />
+         <img class="homeimg" src="images/ricochet.jpg" alt="ricochet">
+         <hr class="outerhr" />
+         <div class="contentparent">
+            <div class="leftcontent">
+               <p>Video via YouTube:</p><iframe width="768" height="720" src="https://www.youtube.com/embed/7iCLQ--Idwg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+            </div>
+            <div class="leftcontent"></div>
+         </div>
+         <hr />
+         <p>Lokaal opgeslagen video:</p>
+         <div class="contentparent">
+            <video width="320" height="240" autoplay controls>
+               <source src="videos/ricochet.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
+         </div>
+         <hr class="outerhr" />
+         <footer>&copy; Roy van de Pol
+            <script>document.write(new Date().getFullYear())</script>
+         </footer>
+      </div>
+   </div>
+</body>
+
+</html>

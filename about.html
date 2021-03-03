@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="nl">
+
+<head>
+   <meta charset="UTF-8">
+   <title>293D5 - Over</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <div class="container">
+      <div class="contentcontainer">
+         <div class="headerparent">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+            <div class="centered">Ricochet</div>
+            <div class="menu">
+               <nav>
+                  <ul>
+                     <li><a class="menu" href="index.html">Home</a></li>
+                     <li><a class="menu" href="news.html">News</a></li>
+                     <li><a class="menu btn" onclick="myFunction()" href="#">Media</a></li>
+                     <li id="myDropdown" class="dropdown-content">
+                        <a href="pictures.html" class="menu">Pictures</a>
+                        <a href="videos.html" class="menu">Videos</a>
+                     </li>
+                     <li><a class="menu current" href="about.html">About</a></li>
+                     <li><a class="menu" href="contact.html">Contact</a></li>
+                  </ul>
+               </nav>
+               <script>
+                  /* When the user clicks on the button, 
+                  toggle between hiding and showing the dropdown content */
+                  function myFunction() {
+                     document.getElementById("myDropdown").classList.toggle("show");
+                  }
+
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function (event) {
+                     if (!event.target.matches('.btn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                           var openDropdown = dropdowns[i];
+                           if (openDropdown.classList.contains('show')) {
+                              openDropdown.classList.remove('show');
+                           }
+                        }
+                     }
+                  }
+               </script>
+            </div>
+         </div>
+         <hr class="outerhr" />
+         <img class="homeimg" src="images/ricochet.jpg" alt="ricochet">
+         <hr class="outerhr" />
+         <div class="contentparent">
+            <div>
+               <table class="tg" style="table-layout: fixed; width: 410px">
+                  <colgroup>
+                     <col style="width: 194px">
+                     <col style="width: 216px">
+                  </colgroup>
+                  <thead>
+                     <tr>
+                        <th class="tg-0pky" colspan="2"><strong>Websites over Ricochet</strong></th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td class="tg-0lax"><strong>Ricochet-world</strong></td>
+                        <td class="tg-0lax"><a href="http://www.ricochet-world.com"
+                              target="_blank">www.ricochet-world.com</a></td>
+                     </tr>
+                     <tr>
+                        <td class="tg-0lax"><strong>Ricochet Bond</strong></td>
+                        <td class="tg-0lax"><a href="http://www.ricochetbond.nl" target="_blank">www.ricochetbond.nl</a>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+         <hr class="outerhr" />
+         <footer>&copy; Roy van de Pol
+            <script>document.write(new Date().getFullYear())</script>
+         </footer>
+      </div>
+   </div>
+</body>
+
+</html>
