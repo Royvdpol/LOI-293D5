@@ -3,83 +3,129 @@
 
 <head>
    <meta charset="UTF-8">
-   <title>293D5 - Pictures</title>
+   <title>293D5</title>
    <link rel="stylesheet" href="css/style.css">
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
 </head>
 
 <body>
-   <div class="container">
-      <div class="contentcontainer">
-         <div class="headerparent">
-            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
-            <div class="centered">Ricochet</div>
-            <div class="menu">
-               <nav>
-                  <ul>
-                     <li><a class="menu" href="index.html">Home</a></li>
-                     <li><a class="menu" href="news.html">News</a></li>
-                     <li><a class="menu btn current" onclick="myFunction()" href="#">Media</a></li>
-                     <li id="myDropdown" class="dropdown-content">
-                        <a href="pictures.html" class="menu">Pictures</a>
-                        <a href="videos.html" class="menu">Videos</a>
-                     </li>
-                     <li><a class="menu" href="about.html">About</a></li>
-                     <li><a class="menu" href="contact.html">Contact</a></li>
+   <header>
+      <div class="container">
+         <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"><span>Ricochet</span></a>
+         </div>
+         <nav>
+            <ul class="menu">
+               <li><a class="menu-item" href="index.html">Home</a></li>
+               <li><a class="menu-item" href="news.html">News</a></li>
+               <li><a class="menu-item btn current" onclick="myFunction()" href="#">Media</a>
+                  <ul id="mediaDropdown" class="dropdown-content menu-item">
+                     <li><a href="pictures.html">Pictures</a></li>
+                     <li><a href="videos.html">Videos</a></li>
                   </ul>
-               </nav>
-               <script>
-                  /* When the user clicks on the button, 
-                  toggle between hiding and showing the dropdown content */
-                  function myFunction() {
-                     document.getElementById("myDropdown").classList.toggle("show");
-                  }
-
-                  // Close the dropdown if the user clicks outside of it
-                  window.onclick = function (event) {
-                     if (!event.target.matches('.btn')) {
-                        var dropdowns = document.getElementsByClassName("dropdown-content");
-                        var i;
-                        for (i = 0; i < dropdowns.length; i++) {
-                           var openDropdown = dropdowns[i];
-                           if (openDropdown.classList.contains('show')) {
-                              openDropdown.classList.remove('show');
-                           }
-                        }
-                     }
-                  }
-               </script>
+               </li>
+               <li><a class="menu-item" href="about.html">About</a></li>
+               <li><a class="menu-item" href="contact.html">Contact</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+   <main>
+      <img class="homeimg" src="images/ricochet3.jpg" alt="ricochet">
+      <div class="container">
+         <h2>Foto's en video's</h2>
+         <div class="row border-bottom remove-col-padding">
+            <div class="col mediumscreen-one-third">
+               <figure class="photobox">
+                  <a href="images/rico2.png" target="_blank">
+                     <img class="img-fluid img-gallery" src="images/rico2.png" alt="ricochet">
+                  </a>
+               </figure>
+            </div>
+            <div class="col mediumscreen-one-third">
+               <figure class="photobox">
+                  <a href="images/rico3.jpg" target="_blank">
+                     <img class="img-fluid img-gallery" src="images/rico3.jpg" alt="ricochet">
+                  </a>
+               </figure>
+            </div>
+            <div class="col mediumscreen-one-third">
+               <figure class="photobox">
+                  <a href="images/ricochet.jpg" target="_blank">
+                     <img class="img-fluid img-gallery" src="images/ricochet.jpg" alt="ricochet">
+                  </a>
+               </figure>
+            </div>
+            <div class="col mediumscreen-half">
+               <figure class="photobox">
+                  <a href="images/ricochet1.jpg" target="_blank">
+                     <img class="img-fluid img-gallery" src="images/ricochet1.jpg" alt="ricochet">
+                  </a>
+               </figure>
+            </div>
+            <div class="col mediumscreen-half">
+               <figure class="photobox">
+                  <a href="images/ricochet2.jpg" target="_blank">
+                     <img class="img-fluid img-gallery" src="images/ricochet2.jpg" alt="ricochet">
+                  </a>
+               </figure>
             </div>
          </div>
-         <hr class="outerhr" />
-         <img class="homeimg" src="images/ricochet.jpg" alt="ricochet">
-         <hr />
-         <div class="mediaparent">
-            <div class="media1"><a href="images/rico2.png" target="_blank"><img class="mediaphoto"
-                     src="images/rico2.png" alt="ricochet"></a></div>
-            <div class="media2"><a href="images/rico3.jpg" target="_blank"><img class="mediaphoto"
-                     src="images/rico3.jpg" alt="ricochet"></a></div>
-            <div class="media3"><a href="images/ricochet.jpg" target="_blank"><img class="mediaphoto"
-                     src="images/ricochet.jpg" alt="ricochet"></a></div>
-            <div class="media4"><a href="images/ricochet1.jpg" target="_blank"><img class="mediaphoto"
-                     src="images/ricochet1.jpg" alt="ricochet"></a></div>
-            <div class="media5"><a href="images/ricochet2.jpg" target="_blank"><img class="mediaphoto"
-                     src="images/ricochet2.jpg" alt="ricochet"></a></div>
+         <div class="row border-bottom remove-col-padding">
+            <div class="col mediumscreen-one-third">
+               <figure class="photobox">
+                  <a href="images/ricochet3.jpg" target="_blank">
+                     <img class="img-fluid img-gallery" src="images/ricochet3.jpg" alt="ricochet">
+                  </a>
+               </figure>
+            </div>
+            <div class="col mediumscreen-one-third">
+               <figure class="photobox">
+                  <a href="images/rico1.png" target="_blank">
+                     <img class="img-fluid img-gallery" src="images/rico1.png" alt="ricochet">
+                  </a>
+               </figure>
+            </div>
+            <div class="col mediumscreen-one-third">
+            </div>
+            <div class="col mediumscreen-half">
+            </div>
+            <div class="col mediumscreen-half">
+            </div>
          </div>
-         <hr />
-         <div class="mediaparent">
-            <div class="media1"><a href="images/ricochet3.jpg" target="_blank"><img class="mediaphoto"
-                     src="images/ricochet3.jpg" alt="ricochet"></a></div>
-            <div class="media2"><a href="images/rico1.png" target="_blank"><img class="mediaphoto"
-                     src="images/rico1.png" alt="ricochet"></a></div>
-         </div>
-         <hr class="outerhr" />
-         <footer>&copy; Roy van de Pol
-            <script>document.write(new Date().getFullYear())</script>
-         </footer>
       </div>
-   </div>
+   </main>
+   <footer>
+      <div class="container">&copy; Roy van de Pol
+         <script>document.write(new Date().getFullYear())</script>
+      </div>
+   </footer>
+
+   <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+         document.getElementById("mediaDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+         if (!event.target.matches('.btn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+               }
+            }
+         }
+      }
+   </script>
+
 </body>
 
 </html>
